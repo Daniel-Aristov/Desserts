@@ -17,25 +17,17 @@
 	<div class="wrapper">
 		@@include("partials/header.html")
 
-		<main class="content">
-			<div class="order-page">
-				<div class="order-background">
-					<img src="assets/images/background-order.jpg" alt="Фон">
-					<div class="order-background_blur"></div>
+		<main class="content order" style="background-image: url('assets/images/background-order.jpg');">
+			<form method="POST" action="" enctype="multipart/form-data" class="order-form">
+				<p class="form_title">Оформление заказа</p>
+				<p><input type="text" name="user_firstname" placeholder="Имя" required/></p>
+				<p><input type="text" name="user_lastname" placeholder="Фамилия"/></p>
+				<p><input type="tel" name="user_phone" placeholder="Телефон" required/></p>
+				<div class="order_description">
+					<textarea name="order_description" placeholder="Пожелания к заказу"></textarea>
 				</div>
-				<div class="container">
-					<form method="POST" action="" enctype="multipart/form-data" class="order-form">
-						<p class="form_title">Оформление заказа</p>
-						<p class="required-el1"><input type="text" name="user_firstname" placeholder="Имя" required/></p>
-						<p><input type="text" name="user_lastname" placeholder="Фамилия"/></p>
-						<p class="required-el2"><input type="tel" name="user_phone" placeholder="Телефон" required/></p>
-						<div class="order_description">
-							<textarea name="order_description" placeholder="Пожелания к заказу"></textarea>
-						</div>
-						<button class="order-form_btn" type="submit">Перезвоните мне</button>
-					</form>
-				</div>
-			</div>
+				<button class="order-form_btn" type="submit">Перезвоните мне</button>
+			</form>
 		</main>
 	
 		@@include("partials/footer.html")

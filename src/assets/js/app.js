@@ -46,11 +46,3 @@ document.addEventListener('click', (e) => {
         popup.classList.remove('active'); 
     }
 });
-
-let swiper = new Swiper(".cakesSwiper", {
-	loop: true,
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-});
