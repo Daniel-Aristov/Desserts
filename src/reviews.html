@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Десерты на заказ</title>
+
+	<link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		@@include("partials/header.html")
+
+		<main class="content">
+			<div class="reviews-page">
+				<div class="container">
+					<a href="#" class="open-popup">Оставить отзыв</a>
+					<div class="popup__bg" id="popup-review">
+						<form class="popup" method="POST" enctype="multipart/form-data">
+							<div class="close-popup cl-btn-7"></div>
+							<div class="review-person-info">
+								<input type="text" name="user_firstname" placeholder="Имя" required/>
+								<input type="text" name="user_lastname" placeholder="Фамилия" required/>
+							</div>
+							<div class="person-foto">
+								<label class="input-file">
+									<input type="file" multiple accept="image/jpeg, image/jpg, image/png" name="user_photo"/>
+									<span class="input-file-btn">Выберите аватар</span>
+								</label>
+							</div>
+							<p class="review-text">
+									<textarea name="review_description" placeholder="Отзыв" required maxlength="500"></textarea><span>*</span>
+							</p>
+							<div class="review-foto">
+								<p class="review-foto__title">Загрузите фото дессерта:</p>
+								<div class="review-foto__inner">
+									<label class="input-file">
+										<input type="file" multiple accept="image/jpeg, image/jpg, image/png" name="photo_1"/>
+										<span class="input-file-btn">Выберите фото</span>
+									</label>
+									<label class="input-file">
+										<input type="file" multiple accept="image/jpeg, image/jpg, image/png" name="photo_2"/>
+										<span class="input-file-btn">Выберите фото</span>
+									</label>
+								</div>
+							</div>
+							<button class="review-btns" type="submit">Отправить</button>
+						</form>
+					</div>
+					<div class="reviews-list">
+						<div class="reviews-item">
+							<div class="reviews-item__content">
+								<div class="reviews-item__avatar">
+									<img src="assets/images/avatar.jpg">
+								</div>
+								<div class="reviews-item__info">
+									<p class="reviews-item__info__firstname">Даниил Аристов</p>
+									<p class="reviews-item__info__date">24.05.2023</p>
+									<p class="reviews-item__info__description">Хороший торт!</p>
+								</div>
+							</div>
+							<div class="reviews-list__image">
+								<a><img src="assets/images/r1.webp"></a>
+								<a><img src="assets/images/r2.webp"></a>
+								<a><img src="assets/images/r3.webp"></a>
+								<a><img src="assets/images/r4.webp"></a>
+								<a><img src="assets/images/r5.webp"></a>
+							</div>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__content">
+								<div class="reviews-item__avatar">
+									<img src="assets/images/avatar.jpg">
+								</div>
+								<div class="reviews-item__info">
+									<p class="reviews-item__info__firstname">Иван Иванов</p>
+									<p class="reviews-item__info__date">12.03.2023</p>
+									<p class="reviews-item__info__description">Плохой торт!</p>
+								</div>
+							</div>
+							<div class="reviews-list__image">
+								<a><img src="assets/images/r1.webp"></a>
+								<a><img src="assets/images/r2.webp"></a>
+							</div>
+						</div>
+						<div class="reviews-item">
+							<div class="reviews-item__content">
+								<div class="reviews-item__avatar">
+									<img src="assets/images/avatar.jpg">
+								</div>
+								<div class="reviews-item__info">
+									<p class="reviews-item__info__firstname">Ксения Панова</p>
+									<p class="reviews-item__info__date">08.04.2022</p>
+									<p class="reviews-item__info__description">Нормальный торт торт!</p>
+								</div>
+							</div>
+							<div class="reviews-list__image">
+								<a><img src="assets/images/r1.webp"></a>
+								<a><img src="assets/images/r2.webp"></a>
+								<a><img src="assets/images/r3.webp"></a>
+								<a><img src="assets/images/r5.webp"></a>
+							</div>
+						</div>
+					</div>
+        </div>
+    	</div>
+		</main>
+	
+		@@include("partials/footer.html")
+	</div>
+
+	<script src="assets/js/app.min.js"></script>
+</body>
+</html>

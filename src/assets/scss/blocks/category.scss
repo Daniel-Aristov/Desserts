@@ -1,0 +1,130 @@
+.category-list {
+	margin: 30px 0 60px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+	color: #29201C;
+}
+
+.category-list__inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.category-list__title {
+	font-size: 21pt;
+	font-weight: normal;
+	letter-spacing: 1px;
+	padding-bottom: 30px;
+}
+
+.hover-effect-scale {
+	display: block;
+	list-style: none;
+	text-align: center;
+}
+
+.hover-effect-scale li {
+	position: relative;
+	display: inline-block;
+	background-color: #fff;
+	margin: 0;
+	border: 2px solid #29201C;
+	box-shadow: 1px 3px 1px 0 rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+}
+
+.hover-effect-scale li p {
+	color: #c4b9b9;
+	font-size: 18pt;
+	margin: 5px;
+	padding-bottom: 20px;
+}
+
+.name-category {
+	text-transform: uppercase;
+}
+
+.category-btn-learn-more {
+	display: block;
+	text-decoration: none;
+	padding: 13px;
+	width: 175px;
+	color: #29201C;
+	background: #c4b9b9;
+	border-radius: 30px;
+	border: 2px solid #29201C;
+	margin: 0 auto;
+	transition: all 0.25s linear;
+}
+
+.category-btn-learn-more:hover {
+	border: 2px solid #c4b9b9;
+	background: #29201C;
+	color: #c4b9b9;
+}
+
+.hover-effect-scale li > div {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.hover-effect-scale li:hover > div {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+.hover-effect-scale li div {
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	transition: all 0.3s ease-in-out;
+	color: #c4b9b9;
+}
+
+.hover-effect-scale li img {
+	width: 400px;
+	height: 360px;
+	max-width: 100%;
+	overflow: hidden;
+	transition: all 0.2s linear;
+}
+
+.hover-effect-scale li:hover img {
+	transform: scale(1.3);
+}
+
+.hover-effect-scale li:hover div {
+	opacity: 1;
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+	.category-list__inner {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 40px;
+	}
+
+	.category-list__title {
+			font-size: 19pt;
+			padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 575px){
+	.category-list__inner {
+			grid-template-columns: 1fr;
+			grid-gap: 30px;
+	}
+
+	.category-list__title {
+			font-size: 17pt;
+			padding-bottom: 20px;
+	}
+}

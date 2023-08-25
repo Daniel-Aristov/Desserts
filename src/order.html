@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Заказ</title>
+
+	<link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		@@include("partials/header.html")
+
+		<main class="content">
+			<div class="order-page">
+				<div class="order-background">
+					<img src="assets/images/background-order.jpg" alt="Фон">
+					<div class="order-background_blur"></div>
+				</div>
+				<div class="container">
+					<form method="POST" action="" enctype="multipart/form-data" class="order-form">
+						<p class="form_title">Оформление заказа</p>
+						<p class="required-el1"><input type="text" name="user_firstname" placeholder="Имя" required/></p>
+						<p><input type="text" name="user_lastname" placeholder="Фамилия"/></p>
+						<p class="required-el2"><input type="tel" name="user_phone" placeholder="Телефон" required/></p>
+						<div class="order_description">
+							<textarea name="order_description" placeholder="Пожелания к заказу"></textarea>
+						</div>
+						<button class="order-form_btn" type="submit">Перезвоните мне</button>
+					</form>
+				</div>
+			</div>
+		</main>
+	
+		@@include("partials/footer.html")
+	</div>
+
+	<script src="assets/js/app.min.js"></script>
+</body>
+</html>

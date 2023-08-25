@@ -1,0 +1,150 @@
+.about {
+	margin: 60px 0;
+}
+
+.about_inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 15px;
+	align-items: center;
+	padding-bottom: 85px;
+	border-bottom: 2px solid #716c6b;
+}
+
+.about_content {
+	font-size: 1.3rem;
+	text-align: center;
+	color: #3B3736;
+}
+
+.about_title {
+	position: relative;
+	font-weight: bolder;
+	margin-top: 20px;
+}
+
+.about_title:after {
+	content: "";
+	width: 100px;
+	height: 2px;
+	background: #54504f;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	bottom: -30px;
+}
+
+.about_text {
+	margin-top: 60px;
+}
+
+.about_link {
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	width: 180px;
+	border: 2px solid #29201C;
+	border-radius: 20px;
+	padding: 10px 8px;
+	margin: 30px auto 10px;
+	color: #54504f;
+}
+
+.about_foto {
+	text-align: center;
+	img {
+		width: 380px;
+		height: 380px;
+		object-fit: cover;
+	}
+}
+
+.about_link:hover {
+background-color: #29201C;
+color: #B2B2B2;
+transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.aside_link {
+width: 220px;
+}
+
+.about_aside {
+padding: 91px 0 60px;
+}
+
+.swiper {
+width: 100%;
+height: 100%;
+}
+
+.swiper-slide {
+height: 530px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+@media (min-width: 576px) and (max-width: 992px){
+	.about_inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+	}
+
+	.about_text {
+			margin-top: 60px;
+			padding-right: 90px;
+			padding-left: 90px;
+	}
+
+	.about_aside {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+	}
+
+	.btn-swiper-next {
+			display: none;
+	}
+
+	.btn-swiper-prev {
+			display: none;
+	}
+}
+
+@media (max-width: 575px){
+	.about_inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+	}
+
+	.about_aside {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+	}
+
+	.btn-swiper-next {
+			display: none;
+	}
+
+	.btn-swiper-prev {
+			display: none;
+	}
+
+	.about_foto-aside img {
+			width: 370px;
+			height: 250px;
+	}
+}

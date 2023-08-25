@@ -38,7 +38,7 @@ const path = {
 				pug:    srcPath + "pug/*.pug",
         js:     srcPath + "assets/js/*.js",
 				css:    srcPath + "assets/css/*.css",
-        scss:   srcPath + "assets/scss/**/*.{scss, sass}",
+        scss:   srcPath + "assets/scss/*.{scss, sass}",
         images: srcPath + "assets/images/**/*.{jpg,jpeg,png,gif,ico,webp}",
 				svg:    srcPath + "assets/images/svg/*.svg",
         fonts:  srcPath + "assets/fonts/**/*.{woff,woff2,ttf,otf,eot,otc,ttc,svg}"
@@ -67,7 +67,7 @@ const server = () => {
 }
 
 export const html = () => {
-	return gulp.src([path.src.html, './src/html/**/*.html'], { base: srcPath })
+	return gulp.src(path.src.html, { base: srcPath })
 		.pipe(gulpFileInclude())
 		.pipe(htmlmin({
 			removeComments: true,
@@ -190,7 +190,9 @@ export const clean = () => {
 
 export const watchFiles = () => {
 	gulp.watch([path.watch.html], html);
+	gulp.watch([path.watch.pug], pug);
 	gulp.watch([path.watch.css], css);
+	gulp.watch([path.watch.scss], scss);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.images], images);
 	gulp.watch([path.watch.images], svg);

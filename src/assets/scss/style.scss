@@ -1,3 +1,40 @@
 @import "vars";
 @import "reset";
-@import "media";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Open Sans';
+	font-size: 16px;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+	background: #FDF5E6;
+}
+
+.container {
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+@import "blocks/navbar.scss";
+@import "blocks/footer.scss";
+@import "blocks/about.scss";
+@import "blocks/fillings.scss";
+@import "blocks/gallery.scss";
+@import "blocks/order.scss";
+@import "blocks/category.scss";
+@import "blocks/desserts.scss";
+@import "blocks/dessert-detail.scss";
+@import "blocks/learn-more.scss";
+@import "blocks/reviews.scss";

@@ -7,19 +7,76 @@
 	<meta name="robots" content="index, follow">
 	<meta name="google" content="notranslate">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="description" content="">
+	<meta name="description" content="desserts">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Главная</title>
+	<title>Десерты на заказ</title>
 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="assets/css/style.min.css">
 </head>
 <body>
-	@@include("partials/header.html")
+	<div class="wrapper">
+		@@include("partials/header.html")
 
-	<div>Основная часть страницы</div>
+		<main class="content">
+			<div class="about">
+        <div class="container">
+            <div class="about_inner">
+                <div class="about_foto">
+                    <img src="assets/images/header_cake.png"/>
+                </div>
+                <div class="about_content">
+                    <p class="about_title">Все началось с хобби...</p>
+                    <p class="about_text">Привет, меня зовут Лера и я начинающий кондитер города Рыбинска и Ярославля.
+                        Мне 19 лет, и я считаю, что именно сейчас самое время попробовать себя в чём то новом.
+                        Кулинарией я начала заниматься только год назад, но я готова работать над своим мастерством и
+                        совершенствовать навыки изготовления кондитерских изделий. И я очень надеюсь, что найдутся люди,
+                        которые по настоящему оценят мои старания и поверят в меня
+                        Начало положено, а дальше - больше, как говорится!
+										</p>
+                    <a href="gallery.html" class="about_link">Фото десертов</a>
+                </div>
+                <div class="about_foto">
+                    <img src="assets/images/header_foto.png"/>
+                </div>
+            </div>
+            <div class="about_aside">
+                <div class="about_content">
+                    <p class="about_title">Любое желание воплотимо!</p>
+                    <p class="about_text">Главным профилем моей работы является изготовление тортов и разнообразных сладостей
+											на заказ. В каталоге Вы найдете как классические торты и капкейки, так и ставшие популярными кейк-попсы
+											и бенто-торты, а также красочное безе, которое особенно нравится детям. У меня нет стандартных наборов
+											и шаблонов для создания своих сладостей, любое Ваше желание по начинке и оформлению воплотимо!
+										</p>
+                    <a href="order.html" class="about_link aside_link">Оформить заказ</a>
+                </div>
+            </div>
+					<div class="swiper cakesSwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="assets/images/прага.webp" alt="Картинка"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/images/медовый.webp" alt="Картинка"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/images/манговый.webp" alt="Картинка"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="assets/images/кокосовый.webp" alt="Картинка"/>
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+    	</div>
+		</main>
+	
+		@@include("partials/footer.html")
+	</div>
 
-	@@include("partials/footer.html")
-
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="assets/js/app.min.js"></script>
 </body>
 </html>
